@@ -5,13 +5,14 @@ import org.codehaus.jackson.map.annotate.JsonDeserialize;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.PersistenceConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.security.oauth2.common.util.JsonDateDeserializer;
 import org.springframework.security.oauth2.common.util.JsonDateSerializer;
 import org.springframework.security.oauth2.provider.approval.Approval;
 
 import java.util.Calendar;
 import java.util.Date;
-
+@Document
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class UaaApproval {
     @Id

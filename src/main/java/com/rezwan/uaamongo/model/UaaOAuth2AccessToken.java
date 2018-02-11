@@ -2,6 +2,7 @@ package com.rezwan.uaamongo.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.PersistenceConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.security.oauth2.common.DefaultOAuth2AccessToken;
 import org.springframework.security.oauth2.common.DefaultOAuth2RefreshToken;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;
@@ -10,8 +11,18 @@ import org.springframework.security.oauth2.common.OAuth2RefreshToken;
 import java.io.Serializable;
 import java.util.*;
 
+@Document
 public class UaaOAuth2AccessToken implements OAuth2AccessToken, Serializable {
     private static final long serialVersionUID = 914967629530462926L;
+
+    public String getTokenId() {
+        return tokenId;
+    }
+
+    public void setTokenId(String tokenId) {
+        this.tokenId = tokenId;
+    }
+
     @Id
     private String tokenId;
     private String value;

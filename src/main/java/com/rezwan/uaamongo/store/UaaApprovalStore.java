@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Collection;
 
-@Component
+@Service
 public class UaaApprovalStore implements ApprovalStore {
     private final UaaApprovalRepository uaaApprovalRepository;
 

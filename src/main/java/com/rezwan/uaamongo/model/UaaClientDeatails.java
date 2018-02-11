@@ -2,11 +2,12 @@ package com.rezwan.uaamongo.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.PersistenceConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.oauth2.provider.ClientDetails;
 
 import java.util.*;
-
+@Document
 public class UaaClientDeatails implements ClientDetails{
     @Id
     private String clientId;
